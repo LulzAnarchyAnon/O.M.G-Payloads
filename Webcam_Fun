@@ -13,7 +13,6 @@ REM it deployed in about 3 seconds.
 
 GUI 
 DELAY 10
-SPACE
 STRING camera
 DELAY 10
 ENTER
