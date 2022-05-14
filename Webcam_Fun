@@ -1,6 +1,6 @@
 REM Title: Webcam_Fun
 REM Author: LulzAnarchyAnon
-REM Description: A simple, and very basic payload that turns on the targets webcam... 
+REM Description: A very simple, and very basic payload that opens the targets webcam... 
 REM (Where you take this payload from here is up to you)
 REM Target: Windows 10-11
 Props: Hak5
