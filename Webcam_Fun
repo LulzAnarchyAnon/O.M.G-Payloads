@@ -1,20 +1,19 @@
+
+
 REM Title: Webcam_Fun
 REM Author: LulzAnarchyAnon
-REM Description: A simple, and very basic payload that turns on the targets webcam.Then the webcam proceeds
-REM to take Five pictures that are automatically stored in the camera roll folder. Afterwards the webcam
-REM minimizes in the toolbar to be discovered later by the target.
+REM Description: A simple, and very basic payload that turns on the targets webcam.Then the REM webcam proceeds to take Five pictures that are automatically stored in the camera roll
+REM folder. Afterwards the webcam minimizes in the toolbar to be discovered later by the target.
 REM (Where you take this payload from here is up to you)
 REM Target: Windows 10-11
 Props: Hak5
 REM Version: 2.0
 REM Category: Prank
 
+REM Payload may need to be adjusted depending on target system, but on the Two systems
+REM tested it deployed in about 5 seconds.
 
-REM Payload may need to be adjusted depending on target system, but on the Two systems tested 
-REM it deployed in about 5 seconds.
-
-
-GUI 
+GUI
 DELAY 5
 STRING camera
 DELAY 50
