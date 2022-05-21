@@ -33,6 +33,7 @@ Comments
 
 Payloads should begin with comments specifying at the very least the name of the payload and author. Additional information such as a brief description, the target, any dependencies / prerequisites and the LED status used is helpful.
 
+
 REM Title: FTP Exfiltrator
 REM Description: Exfiltrates files from %userprofile%\documents via FTP
 REM Author: Hak5Darren
