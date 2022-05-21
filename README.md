@@ -8,7 +8,8 @@ To get a cable like this, you used to need a million dollar budget or to find a 
     Purchase at Hak5
     Documentation
     Discord (Join #omg-support)
-![68747470733a2f2f63646e2e73686f706966792e636f6d2f732f66696c65732f312f303036382f323134322f66696c65732f6f6d675f343030782e706e673f763d31363034363736383931](https://user-images.githubusercontent.com/104794704/169655374-52f8e9b2-eea5-48bc-8862-590796a37a45.png)
+    
+    ![68747470733a2f2f63646e2e73686f706966792e636f6d2f732f66696c65732f312f303036382f323134322f66696c65732f6f6d675f343030782e706e673f763d31363034363736383931](https://user-images.githubusercontent.com/104794704/169655374-52f8e9b2-eea5-48bc-8862-590796a37a45.png)
 Documentation
 
 Documentation on developing payloads for the OMG Cable can be found on the OMG Wiki.
