@@ -8,7 +8,6 @@ Props: Darren Kitchen and I am Jakoby
 REM Version: 1.0
 REM Category: Prank
 
-
 GUI 
 DELAY 5
 STRING camera
