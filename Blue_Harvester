@@ -7,21 +7,23 @@ REM Author: LulzAnarchyAnon
 
 REM READ BELOW BEFORE EXECUTING PAYLOAD...
 
-REM Description: This is a Three stage payload that begins by opening bluetooth file transfer on the target device.  
-REM Next the attackers bluetooth adapter name is selected for pairing. In the second stage the last folder opened
+REM Description: This is a Three stage payload that begins by opening Bluetooth file transfer on the target device.  
+REM Next the attackers Bluetooth adapter name is selected for pairing. In the second stage the last folder opened
 REM is selected followed by all of the files in the folder being selected, and added to  the transfer cue.
-REM The Third, and final stage authticates, and allows pairing between the attacker, and the target device.
-REM Afterwards the selected files are transfered to the attackers device via bluetooth.
-REM I selected the pictures/camera roll folder as a default for this payload, but it can be changed.
-REM Depending on both devices certain varibles will need to be adjusted in order for this payload to run correctly.
-REM At the beginning of the Second stage "k" is for kali (adapter name) as it is the attacker device used for payload.
+REM The Third, and final stage authenticates, and allows pairing between the attacker, and the target device.
+REM Afterwards the selected files are transferred to the attackers device via Bluetooth.
+REM Depending on both devices certain variables will need to be adjusted in order for this payload to run correctly.
+REM At the beginning of the Second stage "k" is used as it selects kali the (adapter name) I used as the attacker device.
+
+
 REM NOTE: Make sure your device is Discoverable...
 REM The cursor coordinates x,y on the screen may vary depending on device...
 REM A Pairing request will pop up, hit CONFIRM... A Pairing accept will pop up, hit CONFIRM
 
 
-REM I'm uncertain at the moment if this payload is more favorable for deplotment on the OMG cables, or 
+REM I'm uncertain at the moment if this payload is more favorable for deployment on the OMG cables, or 
 REM USB Rubber Ducky (YOUR CHOICE)
+
 
 
 
