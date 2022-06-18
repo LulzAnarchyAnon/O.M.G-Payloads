@@ -107,7 +107,7 @@ ENTER
 STRING ) 
 DELAY 500
 ENTER
-STRING $DropBoxAccessToken = "sl.BJw6iDRg9VQzRahBrWMYoGl_M-pZC5syl43L5ejRvMp4gAS_oshbTjLjC3tsmh3N3ez5OukgVfdRfGA-OGubP9zW1fUApRCvYolF0f_QseB233lZJBwOOiLfQ3EbnwvL08xfNgk9
+STRING $DropBoxAccessToken = "YOUR-DROPBOX-ACCESS-TOKEN-HERE"   # Replace with your DropBox Access Token
 DELAY 500
 ENTER
 STRING "
