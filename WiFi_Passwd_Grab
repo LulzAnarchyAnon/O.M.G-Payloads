@@ -2,7 +2,7 @@ REM Title: WiFi_Passwd_Grab
 REM Author: LulzAnarchyAnon
 REM Description: This is a Three stage payload that begins by navagating to Network
 REM Description: and Sharing Center. It then opens the wireless properties security
-REM Description: tab, and makes the Network security key visible, and takes a screenshot.
+REM Description: tab, and makes the Network security key visible finally taking a screenshot.
 REM Description: In the Second stage the screenshot is saved to the Downloads folder.
 REM Description: In the Third, and final stage the screenshot is uploaded via Dropbox.
 REM Target: Windows 10 PowerShell
@@ -13,12 +13,10 @@ REM Category: Exfiltration
 REM This payload may need minor adjustments to run properly depending on 
 REM Attacker, and Target devices.
 
-REM In the First stage the targets data is saved to the target device. 
-REM In the Second stage the loot is uploaded via dropbox.
-
 REM Check out I am Jakoby on Youtube to set up your DropBox for uploads.
 
 REM THIS PAYLOAD IS FOR DEMONSTRATION PURPOSES ONLY, AND NOT INTENDED FOR MISUSE!
+
 
 REM Stage 1
 
