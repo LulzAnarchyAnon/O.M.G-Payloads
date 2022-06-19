@@ -7,64 +7,58 @@ REM Props: Darren Kitchen and I am Jakoby
 REM Version: 1.0
 REM Category: Prank
 
-
 GUI r
 DELAY 200
-STRING powershell -windowstyle hidden 
+STRING powershell 
 DELAY 200
 ENTER
 DELAY 500
-STRING Function Set-SoundVolume 
+STRING Function Set-SoundVolume
 DELAY 100
 ENTER
 STRING {
 DELAY 100
 ENTER
-STRING    Param(
+STRING Param(
 DELAY 100
 ENTER
-STRING        [Parameter(Mandatory=$true)]
+STRING [Parameter(Mandatory=$true)]
 DELAY 100
 ENTER
-STRING        [ValidateRange(0,100)]
+STRING [ValidateRange(0,100)]
 DELAY 100
 ENTER
-STRING        [Int]
+STRING [Int]
 DELAY 100
 ENTER
-STRING        $volume
+STRING $volume
 DELAY 100
 ENTER
-STRING    )
+STRING )
 DELAY 100
 ENTER
-
-    # Calculate number of key presses. 
-STRING    $keyPresses = [Math]::Ceiling( $volume / 2 )
+DELAY 200
+STRING $keyPresses = [Math]::Ceiling( $volume / 2 )
+DELAY 200
+ENTER
+DELAY 200
+STRING $obj = New-Object -ComObject WScript.Shell
 DELAY 100
 ENTER
-    
-    # Create the Windows Shell object. 
-STRING    $obj = New-Object -ComObject WScript.Shell
+DELAY 200
+STRING 1..50 | ForEach-Object { $obj.SendKeys( [char] 174 ) }
 DELAY 100
 ENTER
-    
-    # Set volume to zero. 
-STRING    1..50 | ForEach-Object {  $obj.SendKeys( [char] 174 )  }
+STRING for( $i = 0; $i -lt $keyPresses; $i++ )
 DELAY 100
 ENTER
-    
-    # Set volume to specified level. 
-STRING    for( $i = 0; $i -lt $keyPresses; $i++ )
+STRING {
 DELAY 100
 ENTER
-STRING    {
+STRING $obj.SendKeys( [char] 175 )
 DELAY 100
 ENTER
-STRING        $obj.SendKeys( [char] 175 )
-DELAY 100
-ENTER
-STRING    }
+STRING }
 DELAY 100
 ENTER
 STRING }
@@ -73,8 +67,6 @@ ENTER
 STRING New-Alias -Name "ssv" Set-SoundVolume
 DELAY 100
 ENTER
- 
-# Example usage
 STRING Set-SoundVolume 100
 DELAY 100
 ENTER
@@ -83,8 +75,6 @@ STRING exit
 DELAY 100
 ENTER
 DELAY 5000
-
-
 GUI r
 DELAY 100
 STRING cmd /c start https://www.youtube.com/watch?v=HwdPJwIaVfg
