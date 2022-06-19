@@ -9,7 +9,7 @@ REM Category: Prank
 
 GUI r
 DELAY 200
-STRING powershell 
+STRING powershell -windowstyle hidden
 DELAY 200
 ENTER
 DELAY 500
