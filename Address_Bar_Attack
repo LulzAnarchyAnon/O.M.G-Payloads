@@ -3,7 +3,7 @@ REM Author: LulzAnarchyAnon
 REM Description: A hidden PowerShell is opened, and afterwards it BEGINS!
 REM A Firefox browser is opened, or can already be open at which time TAB 
 REM after TAB of sites open. I chose for 8 Social Media Sites to open.
-REM Target: Windows 10 PowerShell, Firefox
+REM Target: Windows 10, 11, PowerShell and Firefox
 REM Props: Darren Kitchen, and to MG for all his help.
 REM Props: I am Jakoby for the burst of inspiration in writing with 
 REM PowerShell again.
