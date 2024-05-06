@@ -6,7 +6,7 @@ of Ducky script runs saving the exfilled info to a notepad txt file on the Deskt
 REM It is then exfiltrated using a Discord webhook, and finally the txt file is removed from the Desktop
 REM Target: Windows 10 
 REM Props: 
-REM Version: 1.0nhanced Sysinfo Exfil
+REM Version: 1.0
 REM Category: Exfiltration
 
 
