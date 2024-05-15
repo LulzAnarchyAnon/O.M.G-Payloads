@@ -1,4 +1,4 @@
-REM Title: Advanced_System_Exfiltration
+REM Title: A.S.E - Advanced_System_Exfiltration
 REM Author: LulzAnarchyAnon
 REM Description: This slow, and steady staged payload takes it's time and gleans detailed system information using Powershell, 
 REM Ducky script and notepad. First hidden powershells are opened in stages, and payloads are deployed to collect the target 
