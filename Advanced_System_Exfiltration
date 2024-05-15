@@ -48,7 +48,6 @@ DELAY 200
 ENTER
 DELAY 1000
 
-
 GUI r
 DELAY 200
 STRING powershell -windowstyle hidden   
@@ -67,7 +66,6 @@ STRING exit
 DELAY 200
 ENTER
 DELAY 1000
-
 
 GUI r
 DELAY 200
@@ -88,7 +86,6 @@ DELAY 200
 ENTER
 DELAY 1000
 
-
 GUI r
 DELAY 200
 STRING powershell -windowstyle hidden   
@@ -107,7 +104,6 @@ STRING exit
 DELAY 200
 ENTER
 DELAY 1000
-
 
 GUI r
 DELAY 200
@@ -128,7 +124,6 @@ DELAY 200
 ENTER
 DELAY 1000
 
-
 GUI r
 DELAY 200
 STRING powershell -windowstyle hidden  
@@ -147,7 +142,6 @@ STRING exit
 DELAY 200
 ENTER
 DELAY 1000
-
 
 GUI r
 DELAY 200
@@ -168,7 +162,6 @@ DELAY 200
 ENTER
 DELAY 1000
 
-
 GUI r
 DELAY 200
 STRING powershell -windowstyle hidden 
@@ -187,7 +180,6 @@ STRING exit
 DELAY 200
 ENTER
 DELAY 1000
-
 
 GUI r
 DELAY 200
@@ -208,7 +200,6 @@ DELAY 200
 ENTER
 DELAY 1000
 
-
 GUI r
 DELAY 200
 STRING powershell -windowstyle hidden 
@@ -227,7 +218,6 @@ STRING exit
 DELAY 200
 ENTER
 DELAY 1000
-
 
 GUI r
 DELAY 200
@@ -266,7 +256,6 @@ DELAY 200
 ENTER
 DELAY 1000
 
-
 GUI r
 DELAY 200
 STRING powershell -windowstyle hidden  
@@ -286,7 +275,6 @@ DELAY 200
 ENTER
 DELAY 1000
 
-
 GUI r
 DELAY 200
 STRING powershell -windowstyle hidden 
@@ -305,7 +293,6 @@ STRING exit
 DELAY 200
 ENTER
 DELAY 1000
-
 
 GUI r
 DELAY 200
@@ -392,7 +379,6 @@ DELAY 1000
 STRING exit
 ENTER
 DELAY 1000
-
 
 GUI r
 DELAY 200
