@@ -17,7 +17,7 @@ STRING powershell
 DELAY 200
 ENTER
 DELAY 200
-STRING Get-NetIPAddress | 
+STRING Get-NetIPAddress -AddressFamily IPv4 | 
 DELAY 200
 ENTER
 DELAY 2000
