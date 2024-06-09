@@ -15,7 +15,7 @@ ENTER
 DELAY 500
 ALT y
 DELAY 1000
-STRING powershell -noexit -command "[console]::WindowWidth=10; [console]::WindowHeight=5; [console]::BufferWidth=[console]::WindowWidth"
+STRING PowerShell.exe -noe -c ". mode.com con: lines=5 cols=12"
 DELAY 1000
 ENTER
 DELAY 1000
